@@ -1,3 +1,61 @@
 CASO DE TESTE LOGIN
 
-Teste 1 -
+
+Teste 1 - Cadastro de usuário válido
+
+Passos:
+1. Abrir o sistema
+2. Escolher a opção Cadastrar
+3. Inserir um nome de usuário válido
+4. Inserir uma senha válida
+
+Resultado esperado:
+Mensagem: "Conta cadastrada com sucesso!"
+
+
+Teste 2 - Login válido
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Escolher a opção Login
+4. Inserir o usuário correto
+5. Inserir a senha correta
+
+Resultado esperado:
+Mensagem: "Login realizado com sucesso!"
+
+
+Teste 3 - Senha incorreta
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Escolher a opção Login
+4. Inserir o usuário correto
+5. Inserir uma senha incorreta
+
+Resultado esperado:
+Mensagem: "Usuário ou senha incorretos!"
+
+
+Teste 4 - Usuário inexistente
+
+Passos:
+1. Abrir o sistema
+2. Escolher a opção Login
+3. Inserir um usuário não cadastrado
+4. Inserir qualquer senha
+
+Resultado esperado:
+Mensagem: "Usuário ou senha incorretos!"
+
+
+Teste 5 - Opção inválida no menu
+
+Passos:
+1. Abrir o sistema
+2. Inserir uma opção inexistente no menu
+
+Resultado esperado:
+Mensagem: "Opção inválida!"
