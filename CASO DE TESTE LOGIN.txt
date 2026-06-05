@@ -1,7 +1,16 @@
 CASO DE TESTE LOGIN
 
+Teste 1 - Opção inválida no menu
 
-Teste 1 - Cadastro de usuário válido
+Passos:
+1. Abrir o sistema
+2. Inserir uma opção inexistente no menu
+
+Resultado esperado:
+Mensagem: "Opção inválida!"
+
+
+Teste 2 - Cadastro de usuário válido
 
 Passos:
 1. Abrir o sistema
@@ -13,33 +22,35 @@ Resultado esperado:
 Mensagem: "Conta cadastrada com sucesso!"
 
 
-Teste 2 - Login válido
+Teste 3 - Login válido
 
 Passos:
 1. Abrir o sistema
-2. Cadastrar um usuário
-3. Escolher a opção Login
-4. Inserir o usuário correto
-5. Inserir a senha correta
+2. Escolher a opção cadastrar
+3. Cadastrar um usuário
+4. Escolher a opção Login
+5. Inserir o usuário correto
+6. Inserir a senha correta
 
 Resultado esperado:
 Mensagem: "Login realizado com sucesso!"
 
 
-Teste 3 - Senha/Usuário incorreto
+Teste 4 - Senha/Usuário incorreto
 
 Passos:
 1. Abrir o sistema
-2. Cadastrar um usuário
-3. Escolher a opção Login
-4. Inserir o usuário correto
-5. Inserir uma senha incorreta
+2. Escolher a opção cadastrar
+3. Cadastrar um usuário
+4. Escolher a opção Login
+5. Inserir o usuário correto
+6. Inserir uma senha incorreta
 
 Resultado esperado:
 Mensagem: "Usuário ou senha incorretos!"
 
 
-Teste 4 - Usuário inexistente
+Teste 5 - Usuário inexistente
 
 Passos:
 1. Abrir o sistema
@@ -51,11 +62,14 @@ Resultado esperado:
 Mensagem: "Usuário ou senha incorretos!"
 
 
-Teste 5 - Opção inválida no menu
+Teste 6 - Usuário já cadastrado
 
 Passos:
 1. Abrir o sistema
-2. Inserir uma opção inexistente no menu
+2. Escolher a opção cadastrar
+3. Cadastrar um usuário
+4. Depois escolher novamente a opção cadastrar
+5. Inserir o mesmo nome do usuário já cadastrado antes
 
 Resultado esperado:
-Mensagem: "Opção inválida!"
+Mensagem: "Usuário já cadastrado!"
