@@ -13,12 +13,26 @@ int total = 0;
 Conta conta[MAX];
 
 void cadastrar() {
-
+	
+    char usuario[50];
+    char senha[50];
+    int i;
+    
     printf("\nUsuario: ");
-    scanf(" %[^\n]", conta[total].usuario);
-
+    scanf(" %[^\n]", usuario);
+    
+    for (i = 0; i < total; i++) {
+        if (strcmp(usuario, conta[i].usuario) == 0) {
+            printf("\nUsuario ja cadastrado!\n");
+            return;
+        }
+    }
+    
     printf("\nSenha: ");
-    scanf(" %[^\n]", conta[total].senha);
+    scanf(" %[^\n]", senha);
+    
+    strcpy(conta[total].usuario, usuario);
+    strcpy(conta[total].senha, senha);
     
     total++;
     printf("\nConta cadastrada com sucesso!\n");
