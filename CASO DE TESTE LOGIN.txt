@@ -1,5 +1,6 @@
 CASO DE TESTE LOGIN
 
+
 Teste 1 - Opção inválida no menu
 
 Passos:
@@ -47,7 +48,7 @@ Passos:
 6. Inserir uma senha incorreta
 
 Resultado esperado:
-Mensagem: "Usuário ou senha incorretos!"
+Mensagem: "Usuário ou senha incorreta!"
 
 
 Teste 5 - Usuário inexistente
@@ -59,7 +60,7 @@ Passos:
 4. Inserir qualquer senha
 
 Resultado esperado:
-Mensagem: "Usuário ou senha incorretos!"
+Mensagem: "Usuário ou senha incorreta!"
 
 
 Teste 6 - Usuário já cadastrado
@@ -69,7 +70,83 @@ Passos:
 2. Escolher a opção cadastrar
 3. Cadastrar um usuário
 4. Depois escolher novamente a opção cadastrar
-5. Inserir o mesmo nome do usuário já cadastrado antes
+5. Inserir o mesmo nome do usuário já cadastrado
 
 Resultado esperado:
 Mensagem: "Usuário já cadastrado!"
+
+
+Teste 7 - Enviar uma Letra/Palavra/Frase ao invés de um Número
+
+Passos:
+1. Abrir o sistema
+2. Inserir a letra G
+
+Resultado esperado:
+Mensagem: "Entrada invalida, insira um numero:"
+
+(Este teste se aplica em todas as ocasiões em que pede um número para ser inserido)
+
+
+Teste 8 - Excluir conta
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Escolher a opção Excluir conta
+4. Inserir o usuário correspondente ao que foi cadastrado
+5. Inserir a senha correspondente ao usuário que foi cadastrado
+
+Resultado esperado:
+Mensagem: "Conta excluída com sucesso!"
+
+
+Teste 9 - Usuário inexistente ou Senha/Usuário incorreto na Exclusão da conta
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Escolher a opção Excluir conta
+4. Inserir um usuário não cadastrado (ou usuário incorreto)
+5. Inserir uma senha qualquer
+
+Resultado esperado:
+Mensagem: "Usuário ou senha incorreta!"
+
+
+Teste 10 - Limite máximo de contas
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar 100 usuários
+3. Tentar cadastrar um 101º usuário
+
+Resultado esperado:
+Mensagem: "Limite de contas atingido!"
+
+
+Teste 11 - Login após exclusão da conta
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Excluir a conta
+4. Tentar realizar login utilizando as credenciais da conta excluída
+
+Resultado esperado:
+Mensagem: "Usuário ou senha incorreta!"
+
+
+Teste 12 - Login com usuário excluído e recadastrado
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Excluir o usuário
+4. Cadastrar novamente o mesmo usuário
+5. Escolher a opção Login
+6. Inserir o usuário recadastrado
+7. Inserir a senha correspondente
+
+Resultado esperado:
+Mensagem: "Login realizado com sucesso!"
