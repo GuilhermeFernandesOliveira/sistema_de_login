@@ -4,6 +4,7 @@ Projeto desenvolvido em linguagem C com foco em lógica de programação e teste
 - Cadastro de usuário
 - Login com validação de credenciais
 - Verificação de usuário e senha
+- Exclusão de cadastro
 - Menu interativo no terminal
 - Utilização de structs, funções e manipulação de strings para gerenciamento de dados.
 
