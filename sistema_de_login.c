@@ -12,7 +12,22 @@ int total = 0;
 
 Conta conta[MAX];
 
+int lerInteiro() {
+    int valor;
+    while (scanf("%d", &valor) != 1) {
+        printf("\nEntrada invalida, insira um numero: ");
+        while (getchar() != '\n');
+    }
+    while (getchar() != '\n');
+    return valor;
+}
+
 void cadastrar() {
+	
+	if (total >= MAX) {
+    printf("\nLimite de contas atingido!\n");
+    return;
+    }
 	
     char usuario[50];
     char senha[50];
@@ -65,6 +80,38 @@ void login() {
     }
 }
 
+void excluir() {
+    char usuario[50];
+    char senha[50];
+    int encontrado = -1;
+    int i;
+
+    printf("\nInsira o Usuario e a Senha correta:\n");
+    printf("\nUsuario: ");
+    scanf(" %[^\n]", usuario);
+    printf("\nSenha: ");
+    scanf(" %[^\n]", senha);
+
+    for (i = 0; i < total; i++) {
+        if (strcmp(usuario, conta[i].usuario) == 0 && strcmp(senha, conta[i].senha) == 0) {
+            encontrado = i;
+            break;
+        }
+    }
+
+    if (encontrado == -1) {
+        printf("\nUsuario ou senha incorreta!\n");
+        return;
+    }
+
+    for (i = encontrado; i < total - 1; i++) {
+        conta[i] = conta[i + 1];
+    }
+    total--;
+
+    printf("\nConta excluida com sucesso!\n");
+}
+
 int main() {
 
     int opcao;
@@ -72,8 +119,8 @@ int main() {
     do {
     	
     	printf("\n\nEscolha uma opcao:\n");
-        printf("\n1 - Cadastrar\n2 - Login\n0 - Sair\n\n");
-        scanf("%d", &opcao);
+        printf("\n1 - Cadastrar\n2 - Login\n3 - Excluir conta\n0 - Sair\n\n");
+        opcao = lerInteiro();
 
 
         switch(opcao) {
@@ -85,7 +132,11 @@ int main() {
             case 2:
                 login();
                 break;
-
+                
+            case 3:
+            	excluir();
+            	break;
+                
             case 0:
                 printf("\nEncerrando...\n");
                 break;
