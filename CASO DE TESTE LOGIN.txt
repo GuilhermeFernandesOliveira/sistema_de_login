@@ -150,3 +150,72 @@ Passos:
 
 Resultado esperado:
 Mensagem: "Login realizado com sucesso!"
+
+
+Teste 13 - Alterar senha sem conta cadastrada ou com credenciais inválidas
+
+Passos:
+1. Abrir o sistema
+2. Escolher a opção Alterar senha
+3. Inserir um usuário não cadastrado (ou usuário incorreto)
+4. Inserir uma senha qualquer
+
+Resultado esperado:
+Mensagem: "Usuário ou senha incorreta!"
+
+
+Teste 14 - Alterar senha
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Escolher a opção Alterar senha
+4. Inserir o usuário correspondente ao que foi cadastrado
+5. Inserir a senha correspondente ao usuário que foi cadastrado
+6. Inserir uma nova senha diferente da senha atual
+
+Resultado esperado:
+Mensagem: "Senha alterada com sucesso!"
+
+
+Teste 15 - Alterar senha colocando a mesma senha antiga
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Escolher a opção Alterar senha
+4. Inserir o usuário correspondente ao que foi cadastrado
+5. Inserir a senha correspondente ao usuário que foi cadastrado
+6. Inserir a mesma senha novamente
+
+Resultado esperado:
+Mensagem: "Senhas iguais! Tente novamente:"
+O sistema deve solicitar uma nova senha até que seja informada uma senha diferente da atual.
+
+
+Teste 16 - Login com a nova senha
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Alterar a senha
+4. Escolher a opção Login
+5. Inserir o usuário correto
+6. Inserir a nova senha
+
+Resultado esperado:
+Mensagem: "Login realizado com sucesso!"
+
+
+Teste 17 - Login com a senha antiga após alteração
+
+Passos:
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Alterar a senha
+4. Escolher a opção Login
+5. Inserir o usuário correto
+6. Inserir a senha antiga
+
+Resultado esperado:
+Mensagem: "Usuario ou senha incorreta!"
