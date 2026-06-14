@@ -112,6 +112,45 @@ void excluir() {
     printf("\nConta excluida com sucesso!\n");
 }
 
+void alterarSenha() {
+	
+    char usuario[50];
+    char senha[50];
+    char novaSenha[50];
+    int encontrado = -1;
+    int i;
+
+    printf("\nInsira o Usuario e a Senha atual:\n");
+    printf("\nUsuario: ");
+    scanf(" %[^\n]", usuario);
+    printf("\nSenha atual: ");
+    scanf(" %[^\n]", senha);
+
+    for (i = 0; i < total; i++) {
+        if (strcmp(usuario, conta[i].usuario) == 0 && strcmp(senha, conta[i].senha) == 0) {
+            encontrado = i;
+            break;
+        }
+    }
+
+    if (encontrado == -1) {
+        printf("\nUsuario ou senha incorreta!\n");
+        return;
+    }
+
+    do {
+        printf("\nNova senha: ");
+        scanf(" %[^\n]", novaSenha);
+
+        if (strcmp(novaSenha, conta[encontrado].senha) == 0) {
+            printf("\nSenhas iguais! Tente novamente:\n");
+        }
+    } while (strcmp(novaSenha, conta[encontrado].senha) == 0);
+
+    strcpy(conta[encontrado].senha, novaSenha);
+    printf("\nSenha alterada com sucesso!\n");
+}
+
 int main() {
 
     int opcao;
@@ -119,7 +158,7 @@ int main() {
     do {
     	
     	printf("\n\nEscolha uma opcao:\n");
-        printf("\n1 - Cadastrar\n2 - Login\n3 - Excluir conta\n0 - Sair\n\n");
+        printf("\n1 - Cadastrar\n2 - Login\n3 - Excluir conta\n4 - Alterar senha\n0 - Sair\n\n");
         opcao = lerInteiro();
 
 
@@ -135,6 +174,10 @@ int main() {
                 
             case 3:
             	excluir();
+            	break;
+            	
+            case 4:
+            	alterarSenha();
             	break;
                 
             case 0:
