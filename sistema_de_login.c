@@ -58,6 +58,7 @@ void login() {
     char usuario[50];
     char senha[50];
     int encontrado = 0;
+    int tentativas = 1;
     int i;
     
     printf("\nUsuario: ");
@@ -75,8 +76,30 @@ void login() {
     
     if (encontrado) {
         printf("\nLogin realizado com sucesso!\n");
+        return;
+    }
+    
+    while (!encontrado && tentativas < 3) {
+        printf("\nUsuario ou senha incorreta! Tentativa %d de 3.\n", tentativas);
+        printf("\nUsuario: ");
+        scanf(" %[^\n]", usuario);
+        printf("\nSenha: ");
+        scanf(" %[^\n]", senha);
+        
+        for (i = 0; i < total; i++) {
+            if (strcmp(usuario, conta[i].usuario) == 0 && strcmp(senha, conta[i].senha) == 0) {
+                encontrado = 1;
+                break;
+            }
+        }
+        tentativas++;
+    }
+    
+    if (encontrado) {
+        printf("\nLogin realizado com sucesso!\n");
     } else {
         printf("\nUsuario ou senha incorreta!\n");
+        printf("\nNao tem um cadastro ainda? Escolha a opcao 1 no menu para se cadastrar!\n");
     }
 }
 
