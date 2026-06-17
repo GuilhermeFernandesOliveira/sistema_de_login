@@ -3,6 +3,7 @@ Projeto desenvolvido em linguagem C com foco em lógica de programação e teste
 ## Funcionalidades
 - Cadastro de usuário
 - Login com validação de credenciais
+- Controle de tentativas de login
 - Verificação de usuário duplicado
 - Exclusão de cadastro
 - Alteração de senha do usuário
@@ -18,6 +19,7 @@ Projeto desenvolvido em linguagem C com foco em lógica de programação e teste
 - Estruturas de Repetição
 - CRUD de Usuários
 - Validação de Dados
+- Caso de Teste
 
 ## Objetivo
 Praticar conceitos fundamentais da programação em C, incluindo manipulação de dados, autenticação de usuários, validação de entradas e documentação de testes, simulando funcionalidades encontradas em sistemas reais.
