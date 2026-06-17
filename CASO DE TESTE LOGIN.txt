@@ -1,19 +1,19 @@
 CASO DE TESTE LOGIN
 
-
 Teste 1 - Opção inválida no menu
 
 Passos:
+
 1. Abrir o sistema
 2. Inserir uma opção inexistente no menu
 
 Resultado esperado:
-Mensagem: "Opção inválida!"
-
+Mensagem: "Opcao invalida!"
 
 Teste 2 - Cadastro de usuário válido
 
 Passos:
+
 1. Abrir o sistema
 2. Escolher a opção Cadastrar
 3. Inserir um nome de usuário válido
@@ -22,12 +22,12 @@ Passos:
 Resultado esperado:
 Mensagem: "Conta cadastrada com sucesso!"
 
-
 Teste 3 - Login válido
 
 Passos:
+
 1. Abrir o sistema
-2. Escolher a opção cadastrar
+2. Escolher a opção Cadastrar
 3. Cadastrar um usuário
 4. Escolher a opção Login
 5. Inserir o usuário correto
@@ -36,87 +36,92 @@ Passos:
 Resultado esperado:
 Mensagem: "Login realizado com sucesso!"
 
-
 Teste 4 - Senha/Usuário incorreto
 
 Passos:
+
 1. Abrir o sistema
-2. Escolher a opção cadastrar
+2. Escolher a opção Cadastrar
 3. Cadastrar um usuário
 4. Escolher a opção Login
 5. Inserir o usuário correto
 6. Inserir uma senha incorreta
 
 Resultado esperado:
-Mensagem: "Usuário ou senha incorreta!"
-
+Mensagem: "Usuario ou senha incorreta! Tentativa 1 de 3."
 
 Teste 5 - Usuário inexistente
 
 Passos:
+
 1. Abrir o sistema
 2. Escolher a opção Login
 3. Inserir um usuário não cadastrado
 4. Inserir qualquer senha
+5. Repetir mais duas tentativas inválidas
 
 Resultado esperado:
-Mensagem: "Usuário ou senha incorreta!"
+Após três tentativas inválidas, o sistema deve exibir:
 
+Mensagem: "Usuario ou senha incorreta!"
+
+Mensagem: "Nao tem um cadastro ainda? Escolha a opcao 1 no menu para se cadastrar!"
 
 Teste 6 - Usuário já cadastrado
 
 Passos:
+
 1. Abrir o sistema
-2. Escolher a opção cadastrar
+2. Escolher a opção Cadastrar
 3. Cadastrar um usuário
-4. Depois escolher novamente a opção cadastrar
-5. Inserir o mesmo nome do usuário já cadastrado
+4. Escolher novamente a opção Cadastrar
+5. Inserir o mesmo nome de usuário já cadastrado
 
 Resultado esperado:
-Mensagem: "Usuário já cadastrado!"
-
+Mensagem: "Usuario ja cadastrado!"
 
 Teste 7 - Enviar uma Letra/Palavra/Frase ao invés de um Número
 
 Passos:
+
 1. Abrir o sistema
 2. Inserir a letra G
 
 Resultado esperado:
 Mensagem: "Entrada invalida, insira um numero:"
 
-(Este teste se aplica em todas as ocasiões em que pede um número para ser inserido)
-
+(Este teste se aplica em todas as ocasiões em que o sistema solicita um número)
 
 Teste 8 - Excluir conta
 
 Passos:
+
 1. Abrir o sistema
 2. Cadastrar um usuário
 3. Escolher a opção Excluir conta
 4. Inserir o usuário correspondente ao que foi cadastrado
-5. Inserir a senha correspondente ao usuário que foi cadastrado
+5. Inserir a senha correspondente ao usuário cadastrado
 
 Resultado esperado:
-Mensagem: "Conta excluída com sucesso!"
+Mensagem: "Conta excluida com sucesso!"
 
-
-Teste 9 - Usuário inexistente ou Senha/Usuário incorreto na Exclusão da conta
+Teste 9 - Usuário inexistente ou Senha incorreta na exclusão da conta
 
 Passos:
+
 1. Abrir o sistema
 2. Cadastrar um usuário
 3. Escolher a opção Excluir conta
-4. Inserir um usuário não cadastrado (ou usuário incorreto)
+4. Inserir um usuário não cadastrado (ou incorreto)
 5. Inserir uma senha qualquer
 
 Resultado esperado:
-Mensagem: "Usuário ou senha incorreta!"
-
+Mensagem: "Usuario ou senha incorreta!"
 
 Teste 10 - Limite máximo de contas
 
 Passos:
+
 1. Abrir o sistema
 2. Cadastrar 100 usuários
 3. Tentar cadastrar um 101º usuário
@@ -124,22 +129,27 @@ Passos:
 Resultado esperado:
 Mensagem: "Limite de contas atingido!"
 
-
 Teste 11 - Login após exclusão da conta
 
 Passos:
+
 1. Abrir o sistema
 2. Cadastrar um usuário
 3. Excluir a conta
 4. Tentar realizar login utilizando as credenciais da conta excluída
+5. Repetir mais duas tentativas inválidas
 
 Resultado esperado:
-Mensagem: "Usuário ou senha incorreta!"
+Após três tentativas inválidas, o sistema deve exibir:
 
+Mensagem: "Usuario ou senha incorreta!"
+
+Mensagem: "Nao tem um cadastro ainda? Escolha a opcao 1 no menu para se cadastrar!"
 
 Teste 12 - Login com usuário excluído e recadastrado
 
 Passos:
+
 1. Abrir o sistema
 2. Cadastrar um usuário
 3. Excluir o usuário
@@ -151,51 +161,52 @@ Passos:
 Resultado esperado:
 Mensagem: "Login realizado com sucesso!"
 
-
 Teste 13 - Alterar senha sem conta cadastrada ou com credenciais inválidas
 
 Passos:
+
 1. Abrir o sistema
 2. Escolher a opção Alterar senha
-3. Inserir um usuário não cadastrado (ou usuário incorreto)
+3. Inserir um usuário não cadastrado (ou incorreto)
 4. Inserir uma senha qualquer
 
 Resultado esperado:
-Mensagem: "Usuário ou senha incorreta!"
-
+Mensagem: "Usuario ou senha incorreta!"
 
 Teste 14 - Alterar senha
 
 Passos:
+
 1. Abrir o sistema
 2. Cadastrar um usuário
 3. Escolher a opção Alterar senha
 4. Inserir o usuário correspondente ao que foi cadastrado
-5. Inserir a senha correspondente ao usuário que foi cadastrado
+5. Inserir a senha correspondente ao usuário cadastrado
 6. Inserir uma nova senha diferente da senha atual
 
 Resultado esperado:
 Mensagem: "Senha alterada com sucesso!"
 
-
-Teste 15 - Alterar senha colocando a mesma senha antiga
+Teste 15 - Alterar senha utilizando a mesma senha antiga
 
 Passos:
+
 1. Abrir o sistema
 2. Cadastrar um usuário
 3. Escolher a opção Alterar senha
 4. Inserir o usuário correspondente ao que foi cadastrado
-5. Inserir a senha correspondente ao usuário que foi cadastrado
+5. Inserir a senha correspondente ao usuário cadastrado
 6. Inserir a mesma senha novamente
 
 Resultado esperado:
 Mensagem: "Senhas iguais! Tente novamente:"
-O sistema deve solicitar uma nova senha até que seja informada uma senha diferente da atual.
 
+O sistema deve solicitar uma nova senha até que seja informada uma senha diferente da atual.
 
 Teste 16 - Login com a nova senha
 
 Passos:
+
 1. Abrir o sistema
 2. Cadastrar um usuário
 3. Alterar a senha
@@ -206,10 +217,10 @@ Passos:
 Resultado esperado:
 Mensagem: "Login realizado com sucesso!"
 
-
 Teste 17 - Login com a senha antiga após alteração
 
 Passos:
+
 1. Abrir o sistema
 2. Cadastrar um usuário
 3. Alterar a senha
@@ -218,4 +229,34 @@ Passos:
 6. Inserir a senha antiga
 
 Resultado esperado:
+Mensagem: "Usuario ou senha incorreta! Tentativa 1 de 3."
+
+Teste 18 - Limite de tentativas no login
+
+Passos:
+
+1. Abrir o sistema
+2. Escolher a opção Login
+3. Inserir um usuário inexistente (ou incorreto)
+4. Inserir uma senha qualquer
+5. Repetir o procedimento mais duas vezes
+
+Resultado esperado:
+Após três tentativas inválidas, o sistema deve exibir:
+
 Mensagem: "Usuario ou senha incorreta!"
+
+Mensagem: "Nao tem um cadastro ainda? Escolha a opcao 1 no menu para se cadastrar!"
+
+Teste 19 - Login correto após uma tentativa incorreta
+
+Passos:
+
+1. Abrir o sistema
+2. Cadastrar um usuário
+3. Escolher a opção Login
+4. Inserir uma senha incorreta
+5. Inserir o usuário e a senha corretos na segunda tentativa
+
+Resultado esperado:
+Mensagem: "Login realizado com sucesso!"
